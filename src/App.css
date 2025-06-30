@@ -1,38 +1,145 @@
-.App {
-  text-align: center;
+:root {
+  /* Asan Medical Center Official Pantone Colors */
+  --asan-green: #007A3D;          /* Darker Pantone 3155C variant */
+  --asan-orange: #FF6900;         /* Pantone 138C */
+  --asan-teal: #006A6B;           /* Pantone 5438C */
+  --asan-gray: #9B9B9B;           /* Pantone Cool Gray */
+  --asan-gold: #C5A572;           /* Pantone 877C */
+  
+  /* Derived colors for subtle usage */
+  --primary-green: var(--asan-green);
+  --light-green: rgba(0, 122, 61, 0.15);
+  --primary-orange: var(--asan-orange);
+  --light-orange: rgba(255, 105, 0, 0.15);
+  --accent-teal: var(--asan-teal);
+  --light-teal: rgba(0, 106, 107, 0.1);
+  --accent-gold: var(--asan-gold);
+  --light-gold: rgba(197, 165, 114, 0.1);
+  
+  --white: #FFFFFF;
+  --off-white: #FAFAFA;
+  --text-dark: #1D1D1F;
+  --text-gray: var(--asan-gray);
+  --border-light: #E5E5EA;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.15);
 }
 
-.App-logo {
-  height: 40vmin;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background: var(--off-white);
+}
+
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--off-white) 0%, var(--light-green) 100%);
+}
+
+main {
+  width: 100%;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-teal) 100%);
+  padding: 120px 20px 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, var(--light-gold) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  opacity: 0.3;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 24px;
+  letter-spacing: -0.025em;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 40px;
+  letter-spacing: -0.01em;
+}
+
+.hero-cta {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 16px 32px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  color: var(--primary-green);
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 32px rgba(0, 122, 61, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.App-link {
-  color: #61dafb;
+.hero-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 122, 61, 0.3);
+  background: var(--white);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 80px 20px 60px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
   }
 }
