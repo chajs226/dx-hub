@@ -1,0 +1,83 @@
+[
+    {
+      "id": "AI-2024-001",
+      "title": "실시간 흉부 엑스레이 AI 판독 시스템",
+      "subtitle": "영상 판독 정확도 향상 및 응급 환자 분류 자동화",
+      "date": "2024-03-15",
+      "categories": ["의료영상", "Deep Learning"],
+      "thumbnail": "https://picsum.photos/id/101/400/300",
+      "kpi": "판독 시간 40% 단축",
+      "content_blocks": [
+        {
+          "type": "text",
+          "value": "본 프로젝트는 응급실로 유입되는 수많은 흉부 엑스레이 영상을 AI가 실시간으로 분석하여, 기흉이나 폐렴 등 긴급한 처치가 필요한 환자를 우선적으로 선별하기 위해 시작되었습니다."
+        },
+        {
+          "type": "image",
+          "url": "https://picsum.photos/id/101/800/600",
+          "caption": "[그림 1] AI 엔진이 기흉 의심 부위를 히트맵으로 표시하는 화면"
+        },
+        {
+          "type": "text",
+          "value": "기존에는 영상의학과 전문의의 판독까지 평균 2시간이 소요되었으나, AI 도입 후에는 1분 이내에 1차 분류가 완료됩니다. 아래 시연 영상을 통해 실제 작동 과정을 확인하실 수 있습니다."
+        },
+        {
+          "type": "video",
+          "url": "https://www.w3schools.com/html/mov_bbb.mp4",
+          "caption": "[영상 1] 응급의학과 워크플로우 적용 시연"
+        },
+        {
+          "type": "text",
+          "value": "현재 이 시스템은 원내 모든 엑스레이 장비와 연동되어 있으며, 향후 판독 정확도를 높이기 위해 멀티모달 모델로 업그레이드할 예정입니다."
+        }
+      ]
+    },
+    {
+      "id": "AI-2024-002",
+      "title": "NLP 기반 AI 보이스 스크라이브",
+      "subtitle": "진료실 대화의 자동 텍스트화 및 EMR 연동",
+      "date": "2024-08-10",
+      "categories": ["NLP", "Voice AI"],
+      "thumbnail": "https://picsum.photos/id/201/400/300",
+      "kpi": "문서 작성 업무 50% 감소",
+      "content_blocks": [
+        {
+          "type": "text",
+          "value": "의료진이 환자 진료 시 기록 업무에 쏟는 시간을 줄이기 위해, 대화 내용을 자동으로 인식하여 의무기록(EMR) 초안을 작성하는 AI 시스템을 개발했습니다."
+        },
+        {
+          "type": "image",
+          "url": "https://picsum.photos/id/201/800/600",
+          "caption": "[그림 2] 모바일 기기에서의 실시간 음성 인식 인터페이스"
+        },
+        {
+          "type": "text",
+          "value": "한국어 의학 용어와 사투리 인식 모델을 강화하여, 전문적인 진료 환경에서도 90% 이상의 인식률을 기록하고 있습니다."
+        }
+      ]
+    },
+    {
+      "id": "AI-2025-001",
+      "title": "LLM 기반 환자 상담 챗봇 서비스",
+      "subtitle": "24시간 자동 응대 및 맞춤형 건강 정보 제공",
+      "date": "2025-01-05",
+      "categories": ["NLP", "Generative AI"],
+      "thumbnail": "https://picsum.photos/id/301/400/300",
+      "kpi": "상담 만족도 92% 달성",
+      "content_blocks": [
+        {
+          "type": "text",
+          "value": "최신 거대 언어 모델(LLM)을 활용하여 환자들이 병원 이용 시 겪는 궁금증을 즉각 해소할 수 있는 챗봇 서비스를 구축했습니다."
+        },
+        {
+          "type": "text",
+          "value": "단순한 시나리오 답변이 아니라, 우리 병원의 진료 가이드라인을 학습하여 보다 정확하고 신뢰성 있는 답변을 생성합니다."
+        },
+        {
+          "type": "image",
+          "url": "https://picsum.photos/id/301/800/600",
+          "caption": "[그림 3] 챗봇의 답변 방식과 환자 경험 흐름도"
+        }
+      ]
+    }
+  ]
