@@ -73,9 +73,18 @@ dx-hub/
 └── docs/                    # 문서
 ```
 
-## 📝 프로젝트 데이터 추가
+## 📝 프로젝트 데이터 관리
 
-프로젝트 데이터는 `public/data/projects_data.json` 파일에서 관리됩니다.
+### ⚠️ 중요: 데이터 파일 위치
+
+**반드시** `public/data/projects_data.json` 파일을 수정하세요!
+
+```
+✅ public/data/projects_data.json  ← 이 파일을 수정하세요
+❌ data/projects_data.json          ← 사용하지 마세요
+```
+
+Vite는 `public` 폴더의 파일만 웹에서 접근 가능합니다.
 
 ### 데이터 구조
 
@@ -112,6 +121,23 @@ dx-hub/
 - **text**: 일반 텍스트 단락
 - **image**: 이미지 (클릭 시 확대)
 - **video**: 비디오 (HTML5 video player)
+
+### 🔄 변경사항이 반영되지 않을 때
+
+JSON 파일 수정 후 변경사항이 보이지 않으면:
+
+**1. 하드 리프레시 (권장)**
+- Mac: `Cmd + Shift + R`
+- Windows: `Ctrl + Shift + R`
+
+**2. 개발 서버 재시작**
+```bash
+# 현재 서버 종료 (Ctrl + C)
+npm run dev
+```
+
+**3. 브라우저 캐시 비활성화**
+- 개발자 도구(F12) → Network 탭 → "Disable cache" 체크
 
 ## 🎨 디자인 시스템
 

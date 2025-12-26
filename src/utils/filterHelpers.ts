@@ -66,3 +66,28 @@ export function searchProjects(projects: Project[], query: string): Project[] {
     });
   });
 }
+
+/**
+ * Group projects by category
+ */
+export function groupByCategory(projects: Project[]): Record<string, Project[]> {
+  const grouped: Record<string, Project[]> = {};
+
+  projects.forEach(project => {
+    project.categories.forEach(category => {
+      if (!grouped[category]) {
+        grouped[category] = [];
+      }
+      grouped[category].push(project);
+    });
+  });
+
+  // Sort projects within each category by date (newest first)
+  Object.keys(grouped).forEach(category => {
+    grouped[category].sort((a, b) =>
+      new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
+  });
+
+  return grouped;
+}

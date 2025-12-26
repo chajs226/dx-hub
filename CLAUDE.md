@@ -41,7 +41,18 @@ npm run lint
 - 프로젝트 데이터: `public/data/projects_data.json`
 - 블록 기반 컨텐츠 시스템 (text/image/video)
 
-## 새 프로젝트 추가하기
+## 콘텐츠 데이터 관리
+
+### 📁 중요: 데이터 파일 위치
+
+**반드시** `public/data/projects_data.json` 파일을 수정하세요!
+
+```
+✅ public/data/projects_data.json  ← 이 파일을 수정하세요
+❌ data/projects_data.json          ← 이 경로 사용하지 마세요
+```
+
+### 새 프로젝트 추가하기
 
 1. `public/data/projects_data.json` 파일 열기
 2. 새 프로젝트 객체 추가:
@@ -61,7 +72,32 @@ npm run lint
   ]
 }
 ```
-3. 저장 후 자동으로 반영됨
+3. 파일 저장
+
+### 변경사항이 반영되지 않을 때
+
+JSON 파일 수정 후 변경사항이 보이지 않으면:
+
+**방법 1: 하드 리프레시 (권장)**
+- **Mac**: `Cmd + Shift + R`
+- **Windows**: `Ctrl + Shift + R`
+
+**방법 2: 개발 서버 재시작**
+```bash
+# 현재 서버 종료 (Ctrl + C)
+npm run dev
+```
+
+**방법 3: 브라우저 캐시 삭제**
+- 개발자 도구(F12) → Network 탭 → "Disable cache" 체크
+
+### 카테고리 옵션
+
+사용 가능한 카테고리:
+- `"의료영상"` - 파란색 테마
+- `"자연어처리"` - 초록색 테마
+- `"예측분석"` - 보라색 테마
+- `"기타 AI"` - 주황색 테마
 
 ## 컨텍스트 참조
 @~/.claude/common.md

@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useMemo, ReactNode, useEffect } from 'react';
-import type { Project, AppState, ExpandedMedia } from '../types';
+import type { Project, AppState, ExpandedMedia, ViewMode } from '../types';
 import { useProjects } from '../hooks/useProjects';
 import { getUniqueYears, sortByDate } from '../utils/dateHelpers';
 import { getUniqueCategories, filterProjects } from '../utils/filterHelpers';
@@ -9,6 +9,7 @@ interface AppContextType extends AppState {
   setSelectedYear: (year: string | null) => void;
   setSelectedProjectId: (id: string | null) => void;
   setExpandedMedia: (media: ExpandedMedia | null) => void;
+  setViewMode: (mode: ViewMode) => void;
   filteredProjects: Project[];
   availableYears: string[];
   availableCategories: string[];
@@ -32,6 +33,7 @@ export function AppProvider({ children }: AppProviderProps) {
   const [selectedYear, setSelectedYear] = useState<string | null>(null);
   const [selectedProjectId, setSelectedProjectId] = useState<string | null>(null);
   const [expandedMedia, setExpandedMedia] = useState<ExpandedMedia | null>(null);
+  const [viewMode, setViewMode] = useState<ViewMode>('timeline');
 
   // Update projects when loaded
   useEffect(() => {
@@ -65,10 +67,12 @@ export function AppProvider({ children }: AppProviderProps) {
     selectedYear,
     selectedProjectId,
     expandedMedia,
+    viewMode,
     setSelectedCategory,
     setSelectedYear,
     setSelectedProjectId,
     setExpandedMedia,
+    setViewMode,
     filteredProjects,
     availableYears,
     availableCategories,

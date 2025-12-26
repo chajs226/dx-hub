@@ -30,6 +30,9 @@ export interface Project {
   content_blocks: ContentBlock[];
 }
 
+// View mode type
+export type ViewMode = 'timeline' | 'category';
+
 // App state interface
 export interface AppState {
   projects: Project[];
@@ -37,6 +40,7 @@ export interface AppState {
   selectedYear: string | null;
   selectedProjectId: string | null;
   expandedMedia: ExpandedMedia | null;
+  viewMode: ViewMode;
 }
 
 // Media modal state
