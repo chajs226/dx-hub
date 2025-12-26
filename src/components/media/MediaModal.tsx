@@ -49,30 +49,32 @@ export default function MediaModal() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.15 }}
             onClick={closeModal}
-            className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 cursor-pointer"
+            className="fixed inset-0 bg-black/95 backdrop-blur-xl z-50 cursor-pointer"
           />
 
           {/* Modal Content */}
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 lg:p-8 pointer-events-none">
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
+              initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ duration: 0.2 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ duration: 0.15 }}
               className="relative max-w-[95vw] max-h-[95vh] pointer-events-auto"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close button */}
               <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={closeModal}
-                className="absolute -top-12 right-0 lg:-top-14 lg:-right-14 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full p-3 transition-colors"
+                className="absolute -top-14 right-0 flex items-center gap-2 px-4 py-2 bg-slate-900/90 hover:bg-slate-800 border border-slate-700/50 backdrop-blur-md rounded-lg transition-colors focus-ring"
                 aria-label="닫기"
               >
-                <X size={24} className="text-white" />
+                <X size={18} className="text-slate-300" />
+                <span className="text-sm text-slate-300 hidden sm:inline">닫기</span>
+                <span className="text-xs text-slate-500 hidden lg:inline">(ESC)</span>
               </motion.button>
 
               {/* Media content */}
@@ -80,14 +82,14 @@ export default function MediaModal() {
                 <img
                   src={expandedMedia.url}
                   alt="확대된 이미지"
-                  className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+                  className="max-w-full max-h-[90vh] object-contain rounded-xl shadow-2xl border border-slate-800/50"
                 />
               ) : (
                 <video
                   src={expandedMedia.url}
                   controls
                   autoPlay
-                  className="max-w-full max-h-[90vh] rounded-lg shadow-2xl"
+                  className="max-w-full max-h-[90vh] rounded-xl shadow-2xl border border-slate-800/50"
                 />
               )}
             </motion.div>

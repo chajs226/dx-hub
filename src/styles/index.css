@@ -4,11 +4,11 @@
 
 @layer base {
   * {
-    @apply border-slate-700;
+    @apply border-slate-800;
   }
 
   body {
-    @apply bg-slate-900 text-slate-100 antialiased;
+    @apply bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-100 antialiased;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   }
@@ -19,22 +19,41 @@
 }
 
 @layer components {
-  /* Glassmorphism utility class */
-  .glassmorphism {
-    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-glass;
+  /* shadcn-style card */
+  .card {
+    @apply rounded-xl border bg-slate-900/50 backdrop-blur-sm shadow-sm;
   }
 
-  /* Scrollbar styling */
+  .card-hover {
+    @apply transition-all duration-200 hover:shadow-md hover:border-slate-700;
+  }
+
+  /* Clean glassmorphism */
+  .glassmorphism {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-lg;
+  }
+
+  /* Subtle hover effect */
+  .hover-lift {
+    @apply transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg;
+  }
+
+  /* Scrollbar styling - shadcn style */
   .custom-scrollbar::-webkit-scrollbar {
-    @apply w-2;
+    @apply w-1.5;
   }
 
   .custom-scrollbar::-webkit-scrollbar-track {
-    @apply bg-slate-800/50 rounded-full;
+    @apply bg-transparent;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    @apply bg-slate-600 rounded-full hover:bg-slate-500;
+    @apply bg-slate-700/50 rounded-full hover:bg-slate-600/50;
+  }
+
+  /* Focus ring - shadcn style */
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950;
   }
 }
 

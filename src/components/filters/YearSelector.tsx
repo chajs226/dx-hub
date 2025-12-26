@@ -15,15 +15,14 @@ export default function YearSelector() {
           <motion.button
             key={year}
             onClick={() => setSelectedYear(year === '전체' ? null : year)}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
             className={`
-              px-4 py-2 rounded-lg font-medium transition-all
+              px-3.5 py-2 rounded-lg text-sm font-medium transition-all focus-ring
               ${isActive
-                ? 'bg-blue-500 text-white shadow-glow-blue border-blue-400'
-                : 'bg-slate-700/50 text-slate-300 hover:bg-slate-700 border-slate-600'
+                ? 'bg-blue-500/10 text-blue-400 border border-blue-500/50 shadow-glow-blue'
+                : 'bg-slate-800/40 text-slate-400 border border-slate-700/50 hover:bg-slate-800/60 hover:text-slate-300'
               }
-              border
             `}
           >
             {year}

@@ -24,10 +24,10 @@ export default function ImageBlock({ data, index }: ImageBlockProps) {
       transition={{ duration: 0.4, delay: index * 0.1 }}
       className="my-8"
     >
-      <div className="relative group rounded-lg overflow-hidden">
+      <div className="relative group rounded-xl overflow-hidden border border-slate-800/50">
         {/* Loading skeleton */}
         {!isLoaded && (
-          <div className="absolute inset-0 bg-slate-700 animate-pulse" />
+          <div className="absolute inset-0 bg-slate-800/50 animate-pulse" />
         )}
 
         {/* Image */}
@@ -39,29 +39,25 @@ export default function ImageBlock({ data, index }: ImageBlockProps) {
           onLoad={() => setIsLoaded(true)}
           onClick={handleClick}
           className={`
-            w-full h-auto rounded-lg cursor-zoom-in transition-all duration-300
+            w-full h-auto cursor-zoom-in transition-all duration-300
             ${isLoaded ? 'opacity-100' : 'opacity-0'}
-            group-hover:scale-[1.02]
           `}
         />
 
         {/* Zoom overlay on hover */}
-        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center cursor-zoom-in"
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6 cursor-zoom-in"
           onClick={handleClick}
         >
-          <motion.div
-            initial={{ scale: 0 }}
-            whileHover={{ scale: 1 }}
-            className="bg-white/20 backdrop-blur-sm rounded-full p-4"
-          >
-            <ZoomIn size={32} className="text-white" />
-          </motion.div>
+          <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 backdrop-blur-md border border-white/20">
+            <ZoomIn size={16} className="text-white" />
+            <span className="text-sm text-white font-medium">확대하기</span>
+          </div>
         </div>
       </div>
 
       {/* Caption */}
       {data.caption && (
-        <p className="text-sm text-slate-400 italic mt-3 text-center">
+        <p className="text-sm text-slate-500 mt-3">
           {data.caption}
         </p>
       )}
