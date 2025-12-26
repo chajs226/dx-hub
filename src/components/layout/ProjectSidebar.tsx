@@ -133,16 +133,31 @@ export default function ProjectSidebar() {
             <div className="space-y-6">
               {viewMode === 'timeline' ? (
                 // Timeline View: Group by Year
-                years.map((year) => (
-                  <div key={year}>
-                    <YearSeparator year={year} />
-                    <div className="space-y-2">
-                      {groupedByYear[year].map((project) => (
-                        <TimelineItem key={project.id} project={project} />
-                      ))}
+                years.map((year, yearIndex) => {
+                  const yearProjects = groupedByYear[year];
+                  const isFirstYear = yearIndex === 0;
+
+                  return (
+                    <div key={year}>
+                      <YearSeparator year={year} />
+                      <div className="space-y-0">
+                        {yearProjects.map((project, projectIndex) => {
+                          const isFirst = isFirstYear && projectIndex === 0;
+                          const isLast = yearIndex === years.length - 1 && projectIndex === yearProjects.length - 1;
+
+                          return (
+                            <TimelineItem
+                              key={project.id}
+                              project={project}
+                              isFirst={isFirst}
+                              isLast={isLast}
+                            />
+                          );
+                        })}
+                      </div>
                     </div>
-                  </div>
-                ))
+                  );
+                })
               ) : (
                 // Category View: Group by Category
                 categories.map((category) => (
