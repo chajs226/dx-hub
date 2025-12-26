@@ -22,26 +22,26 @@ export default function ProjectSidebar() {
 
   return (
     <aside className="h-full bg-slate-950/30 border-r border-slate-800/50 flex flex-col overflow-hidden">
-      {/* Header with Logo */}
-      <div className="px-5 py-4 border-b border-slate-800/50 bg-slate-950/50">
+      {/* Header with Logo - Seoul Asan Medical Center Identity */}
+      <div className="px-5 py-4 border-b border-slate-800/50 bg-gradient-to-br from-primary-950/30 via-slate-950/50 to-slate-950/50">
         <div className="flex items-center gap-3 mb-4">
-          <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 shadow-lg shadow-blue-500/20">
+          <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-primary-600 to-primary-800 shadow-lg shadow-primary-600/30">
             <Sparkles className="w-5 h-5 text-white" />
           </div>
           <div>
             <h1 className="text-lg font-semibold text-slate-100">DX Hub</h1>
-            <p className="text-xs text-slate-400">디지털정보혁신본부 AI 아카이브</p>
+            <p className="text-xs text-primary-400/80">디지털정보혁신본부 AI 아카이브</p>
           </div>
         </div>
 
-        {/* View Mode Tabs */}
+        {/* View Mode Tabs - Teal Active State */}
         <div className="flex gap-1 p-1 bg-slate-900/50 rounded-lg border border-slate-800/50">
           <button
             onClick={() => setViewMode('timeline')}
             className={`
               flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all
               ${viewMode === 'timeline'
-                ? 'bg-blue-500/20 text-blue-400 shadow-sm'
+                ? 'bg-primary-500/20 text-primary-400 shadow-sm ring-1 ring-primary-500/30'
                 : 'text-slate-400 hover:text-slate-300 hover:bg-slate-800/40'
               }
             `}
@@ -54,7 +54,7 @@ export default function ProjectSidebar() {
             className={`
               flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all
               ${viewMode === 'category'
-                ? 'bg-blue-500/20 text-blue-400 shadow-sm'
+                ? 'bg-primary-500/20 text-primary-400 shadow-sm ring-1 ring-primary-500/30'
                 : 'text-slate-400 hover:text-slate-300 hover:bg-slate-800/40'
               }
             `}

@@ -1,36 +1,55 @@
 import { motion } from 'framer-motion';
 import { useApp } from '../../context/AppContext';
 
+// Seoul Asan Medical Center - Harmonized Teal Spectrum for Categories
 const categoryStyles: Record<string, { bg: string; text: string; border: string; glow: string }> = {
   '의료영상': {
-    bg: 'bg-blue-500/10',
-    text: 'text-blue-400',
-    border: 'border-blue-500/50',
-    glow: 'shadow-glow-blue',
+    bg: 'bg-[#1A9B9B]/15',
+    text: 'text-[#1A9B9B]',
+    border: 'border-[#1A9B9B]/50',
+    glow: 'shadow-glow-teal',
   },
   '자연어처리': {
-    bg: 'bg-green-500/10',
-    text: 'text-green-400',
-    border: 'border-green-500/50',
-    glow: 'shadow-glow-green',
+    bg: 'bg-cyan-400/15',
+    text: 'text-cyan-400',
+    border: 'border-cyan-400/50',
+    glow: 'shadow-glow-cyan',
   },
   'NLP': {
-    bg: 'bg-green-500/10',
-    text: 'text-green-400',
-    border: 'border-green-500/50',
-    glow: 'shadow-glow-green',
+    bg: 'bg-cyan-400/15',
+    text: 'text-cyan-400',
+    border: 'border-cyan-400/50',
+    glow: 'shadow-glow-cyan',
   },
   '예측분석': {
-    bg: 'bg-purple-500/10',
-    text: 'text-purple-400',
-    border: 'border-purple-500/50',
-    glow: 'shadow-glow-purple',
+    bg: 'bg-teal-400/15',
+    text: 'text-teal-400',
+    border: 'border-teal-400/50',
+    glow: 'shadow-glow-turquoise',
+  },
+  'Deep Learning': {
+    bg: 'bg-cyan-500/15',
+    text: 'text-cyan-500',
+    border: 'border-cyan-500/50',
+    glow: 'shadow-glow-deepTeal',
+  },
+  'Voice AI': {
+    bg: 'bg-emerald-400/15',
+    text: 'text-emerald-400',
+    border: 'border-emerald-400/50',
+    glow: 'shadow-glow-mint',
+  },
+  'Generative AI': {
+    bg: 'bg-[#FF8C42]/15',
+    text: 'text-[#FF8C42]',
+    border: 'border-[#FF8C42]/50',
+    glow: 'shadow-glow-coral',
   },
   '전체': {
-    bg: 'bg-slate-500/10',
-    text: 'text-slate-300',
-    border: 'border-slate-500/50',
-    glow: '',
+    bg: 'bg-primary-500/15',
+    text: 'text-primary-400',
+    border: 'border-primary-500/50',
+    glow: 'shadow-glow-teal',
   },
 };
 

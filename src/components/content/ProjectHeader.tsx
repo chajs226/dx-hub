@@ -8,24 +8,25 @@ interface ProjectHeaderProps {
   project: Project;
 }
 
+// Seoul Asan Medical Center - Harmonized Teal Gradients
 const categoryGradients: Record<string, string> = {
-  '의료영상': 'from-blue-500/10 via-blue-500/5 to-transparent',
-  '자연어처리': 'from-green-500/10 via-green-500/5 to-transparent',
-  'NLP': 'from-green-500/10 via-green-500/5 to-transparent',
-  '예측분석': 'from-purple-500/10 via-purple-500/5 to-transparent',
-  'Deep Learning': 'from-indigo-500/10 via-indigo-500/5 to-transparent',
-  'Voice AI': 'from-teal-500/10 via-teal-500/5 to-transparent',
-  'Generative AI': 'from-pink-500/10 via-pink-500/5 to-transparent',
+  '의료영상': 'from-[#1A9B9B]/12 via-[#1A9B9B]/6 to-transparent',
+  '자연어처리': 'from-cyan-400/12 via-cyan-400/6 to-transparent',
+  'NLP': 'from-cyan-400/12 via-cyan-400/6 to-transparent',
+  '예측분석': 'from-teal-400/12 via-teal-400/6 to-transparent',
+  'Deep Learning': 'from-cyan-500/12 via-cyan-500/6 to-transparent',
+  'Voice AI': 'from-emerald-400/12 via-emerald-400/6 to-transparent',
+  'Generative AI': 'from-[#FF8C42]/12 via-[#FF8C42]/6 to-transparent',
 };
 
 const categoryAccentColors: Record<string, string> = {
-  '의료영상': 'text-blue-400',
-  '자연어처리': 'text-green-400',
-  'NLP': 'text-green-400',
-  '예측분석': 'text-purple-400',
-  'Deep Learning': 'text-indigo-400',
-  'Voice AI': 'text-teal-400',
-  'Generative AI': 'text-pink-400',
+  '의료영상': 'text-[#1A9B9B]',
+  '자연어처리': 'text-cyan-400',
+  'NLP': 'text-cyan-400',
+  '예측분석': 'text-teal-400',
+  'Deep Learning': 'text-cyan-500',
+  'Voice AI': 'text-emerald-400',
+  'Generative AI': 'text-[#FF8C42]',
 };
 
 export default function ProjectHeader({ project }: ProjectHeaderProps) {

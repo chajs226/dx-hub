@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useMemo, ReactNode, useEffect } from 'react';
+import { createContext, useContext, useState, useMemo, ReactNode, useEffect } from 'react';
 import type { Project, AppState, ExpandedMedia, ViewMode } from '../types';
 import { useProjects } from '../hooks/useProjects';
 import { getUniqueYears, sortByDate } from '../utils/dateHelpers';

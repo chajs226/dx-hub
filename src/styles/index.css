@@ -8,7 +8,15 @@
   }
 
   body {
-    @apply bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-100 antialiased;
+    /* Seoul Asan Medical Center - Subtle teal-infused dark background */
+    @apply text-slate-100 antialiased;
+    background: linear-gradient(135deg,
+      hsl(222.2, 84%, 4.9%) 0%,
+      hsl(220, 70%, 5%) 25%,
+      hsl(180, 40%, 6%) 50%,
+      hsl(220, 70%, 5%) 75%,
+      hsl(222.2, 84%, 4.9%) 100%
+    );
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   }
@@ -51,22 +59,34 @@
     @apply bg-slate-700/50 rounded-full hover:bg-slate-600/50;
   }
 
-  /* Focus ring - shadcn style */
+  /* Focus ring - Seoul Asan Medical Center teal accent */
   .focus-ring {
-    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950;
   }
 
-  /* Category glow effects for timeline */
-  .shadow-glow-blue {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.15), 0 0 40px rgba(59, 130, 246, 0.1);
+  /* Seoul Asan Medical Center - Harmonized Teal Spectrum Glow Effects */
+  .shadow-glow-teal {
+    box-shadow: 0 0 20px rgba(26, 155, 155, 0.2), 0 0 40px rgba(26, 155, 155, 0.12);
   }
 
-  .shadow-glow-green {
-    box-shadow: 0 0 20px rgba(34, 197, 94, 0.15), 0 0 40px rgba(34, 197, 94, 0.1);
+  .shadow-glow-cyan {
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.2), 0 0 40px rgba(34, 211, 238, 0.12);
   }
 
-  .shadow-glow-purple {
-    box-shadow: 0 0 20px rgba(168, 85, 247, 0.15), 0 0 40px rgba(168, 85, 247, 0.1);
+  .shadow-glow-turquoise {
+    box-shadow: 0 0 20px rgba(45, 212, 191, 0.2), 0 0 40px rgba(45, 212, 191, 0.12);
+  }
+
+  .shadow-glow-deepTeal {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.2), 0 0 40px rgba(6, 182, 212, 0.12);
+  }
+
+  .shadow-glow-mint {
+    box-shadow: 0 0 20px rgba(52, 211, 153, 0.2), 0 0 40px rgba(52, 211, 153, 0.12);
+  }
+
+  .shadow-glow-coral {
+    box-shadow: 0 0 20px rgba(255, 140, 66, 0.25), 0 0 40px rgba(255, 140, 66, 0.15);
   }
 }
 

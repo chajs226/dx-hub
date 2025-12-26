@@ -5,26 +5,42 @@ interface CategorySeparatorProps {
   count: number;
 }
 
+// Seoul Asan Medical Center - Harmonized Teal Spectrum
 const categoryStyles: Record<string, { bg: string; text: string; border: string }> = {
   '의료영상': {
-    bg: 'bg-blue-500/10',
-    text: 'text-blue-400',
-    border: 'border-blue-500/30',
+    bg: 'bg-[#1A9B9B]/12',
+    text: 'text-[#1A9B9B]',
+    border: 'border-[#1A9B9B]/30',
   },
   '자연어처리': {
-    bg: 'bg-green-500/10',
-    text: 'text-green-400',
-    border: 'border-green-500/30',
+    bg: 'bg-cyan-400/12',
+    text: 'text-cyan-400',
+    border: 'border-cyan-400/30',
   },
   'NLP': {
-    bg: 'bg-green-500/10',
-    text: 'text-green-400',
-    border: 'border-green-500/30',
+    bg: 'bg-cyan-400/12',
+    text: 'text-cyan-400',
+    border: 'border-cyan-400/30',
   },
   '예측분석': {
-    bg: 'bg-purple-500/10',
-    text: 'text-purple-400',
-    border: 'border-purple-500/30',
+    bg: 'bg-teal-400/12',
+    text: 'text-teal-400',
+    border: 'border-teal-400/30',
+  },
+  'Deep Learning': {
+    bg: 'bg-cyan-500/12',
+    text: 'text-cyan-500',
+    border: 'border-cyan-500/30',
+  },
+  'Voice AI': {
+    bg: 'bg-emerald-400/12',
+    text: 'text-emerald-400',
+    border: 'border-emerald-400/30',
+  },
+  'Generative AI': {
+    bg: 'bg-[#FF8C42]/12',
+    text: 'text-[#FF8C42]',
+    border: 'border-[#FF8C42]/30',
   },
 };
 

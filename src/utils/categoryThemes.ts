@@ -2,56 +2,57 @@ import type { CategoryTheme } from '../types';
 
 /**
  * Category theme mapping for visual styling
+ * Based on Seoul Asan Medical Center CI - Harmonized Teal Spectrum
  */
 export const categoryThemes: Record<string, CategoryTheme> = {
   '의료영상': {
-    primary: 'blue-500',
-    border: 'border-blue-400',
-    gradient: 'from-blue-500/20 to-blue-600/20',
-    glow: 'shadow-glow-blue',
-    text: 'text-blue-300'
+    primary: 'medical-teal',
+    border: 'border-medical-teal-light',
+    gradient: 'from-medical-teal/20 to-medical-teal-dark/20',
+    glow: 'shadow-glow-teal',
+    text: 'text-[#1A9B9B]' // Bright teal for medical imaging
   },
   '자연어처리': {
-    primary: 'green-500',
-    border: 'border-green-400',
-    gradient: 'from-green-500/20 to-green-600/20',
-    glow: 'shadow-glow-green',
-    text: 'text-green-300'
+    primary: 'medical-cyan',
+    border: 'border-medical-cyan-light',
+    gradient: 'from-medical-cyan/20 to-medical-cyan-dark/20',
+    glow: 'shadow-glow-cyan',
+    text: 'text-cyan-400' // Cyan for NLP
   },
   'NLP': {
-    primary: 'green-500',
-    border: 'border-green-400',
-    gradient: 'from-green-500/20 to-green-600/20',
-    glow: 'shadow-glow-green',
-    text: 'text-green-300'
+    primary: 'medical-cyan',
+    border: 'border-medical-cyan-light',
+    gradient: 'from-medical-cyan/20 to-medical-cyan-dark/20',
+    glow: 'shadow-glow-cyan',
+    text: 'text-cyan-400'
   },
   '예측분석': {
-    primary: 'purple-500',
-    border: 'border-purple-400',
-    gradient: 'from-purple-500/20 to-purple-600/20',
-    glow: 'shadow-glow-purple',
-    text: 'text-purple-300'
+    primary: 'medical-turquoise',
+    border: 'border-medical-turquoise-light',
+    gradient: 'from-medical-turquoise/20 to-medical-turquoise-dark/20',
+    glow: 'shadow-glow-turquoise',
+    text: 'text-teal-400' // Turquoise for predictive analytics
   },
   'Deep Learning': {
-    primary: 'indigo-500',
-    border: 'border-indigo-400',
-    gradient: 'from-indigo-500/20 to-indigo-600/20',
-    glow: 'shadow-glow-blue',
-    text: 'text-indigo-300'
+    primary: 'medical-deepTeal',
+    border: 'border-medical-deepTeal-light',
+    gradient: 'from-medical-deepTeal/20 to-medical-deepTeal-dark/20',
+    glow: 'shadow-glow-deepTeal',
+    text: 'text-cyan-500' // Deep teal for deep learning
   },
   'Voice AI': {
-    primary: 'teal-500',
-    border: 'border-teal-400',
-    gradient: 'from-teal-500/20 to-teal-600/20',
-    glow: 'shadow-glow-green',
-    text: 'text-teal-300'
+    primary: 'medical-mint',
+    border: 'border-medical-mint-light',
+    gradient: 'from-medical-mint/20 to-medical-mint-dark/20',
+    glow: 'shadow-glow-mint',
+    text: 'text-emerald-400' // Mint for voice AI
   },
   'Generative AI': {
-    primary: 'pink-500',
-    border: 'border-pink-400',
-    gradient: 'from-pink-500/20 to-pink-600/20',
-    glow: 'shadow-glow-purple',
-    text: 'text-pink-300'
+    primary: 'medical-coral',
+    border: 'border-medical-coral-light',
+    gradient: 'from-medical-coral/20 to-medical-coral-dark/20',
+    glow: 'shadow-glow-coral',
+    text: 'text-[#FF8C42]' // Coral orange for generative AI (accent color)
   },
 };
 

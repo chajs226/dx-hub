@@ -10,44 +10,45 @@ interface TimelineItemProps {
   isLast?: boolean;
 }
 
+// Seoul Asan Medical Center - Harmonized Teal Spectrum
 const categoryBorderColors: Record<string, string> = {
-  '의료영상': 'border-l-blue-500',
-  '자연어처리': 'border-l-green-500',
-  'NLP': 'border-l-green-500',
-  '예측분석': 'border-l-purple-500',
-  'Deep Learning': 'border-l-indigo-500',
-  'Voice AI': 'border-l-teal-500',
-  'Generative AI': 'border-l-pink-500',
+  '의료영상': 'border-l-[#1A9B9B]', // Bright teal
+  '자연어처리': 'border-l-cyan-400',
+  'NLP': 'border-l-cyan-400',
+  '예측분석': 'border-l-teal-400',
+  'Deep Learning': 'border-l-cyan-500',
+  'Voice AI': 'border-l-emerald-400',
+  'Generative AI': 'border-l-[#FF8C42]', // Accent coral orange
 };
 
 const categoryGlowColors: Record<string, string> = {
-  '의료영상': 'shadow-glow-blue',
-  '자연어처리': 'shadow-glow-green',
-  'NLP': 'shadow-glow-green',
-  '예측분석': 'shadow-glow-purple',
-  'Deep Learning': 'shadow-glow-blue',
-  'Voice AI': 'shadow-glow-green',
-  'Generative AI': 'shadow-glow-purple',
+  '의료영상': 'shadow-glow-teal',
+  '자연어처리': 'shadow-glow-cyan',
+  'NLP': 'shadow-glow-cyan',
+  '예측분석': 'shadow-glow-turquoise',
+  'Deep Learning': 'shadow-glow-deepTeal',
+  'Voice AI': 'shadow-glow-mint',
+  'Generative AI': 'shadow-glow-coral',
 };
 
 const categoryDotColors: Record<string, string> = {
-  '의료영상': 'bg-blue-500',
-  '자연어처리': 'bg-green-500',
-  'NLP': 'bg-green-500',
-  '예측분석': 'bg-purple-500',
-  'Deep Learning': 'bg-indigo-500',
-  'Voice AI': 'bg-teal-500',
-  'Generative AI': 'bg-pink-500',
+  '의료영상': 'bg-[#1A9B9B]', // Bright teal
+  '자연어처리': 'bg-cyan-400',
+  'NLP': 'bg-cyan-400',
+  '예측분석': 'bg-teal-400',
+  'Deep Learning': 'bg-cyan-500',
+  'Voice AI': 'bg-emerald-400',
+  'Generative AI': 'bg-[#FF8C42]', // Accent coral orange
 };
 
 const categoryDotGlow: Record<string, string> = {
-  '의료영상': 'shadow-[0_0_12px_rgba(59,130,246,0.5)]',
-  '자연어처리': 'shadow-[0_0_12px_rgba(34,197,94,0.5)]',
-  'NLP': 'shadow-[0_0_12px_rgba(34,197,94,0.5)]',
-  '예측분석': 'shadow-[0_0_12px_rgba(168,85,247,0.5)]',
-  'Deep Learning': 'shadow-[0_0_12px_rgba(99,102,241,0.5)]',
-  'Voice AI': 'shadow-[0_0_12px_rgba(20,184,166,0.5)]',
-  'Generative AI': 'shadow-[0_0_12px_rgba(236,72,153,0.5)]',
+  '의료영상': 'shadow-[0_0_12px_rgba(26,155,155,0.6)]', // Teal glow
+  '자연어처리': 'shadow-[0_0_12px_rgba(34,211,238,0.6)]', // Cyan glow
+  'NLP': 'shadow-[0_0_12px_rgba(34,211,238,0.6)]',
+  '예측분석': 'shadow-[0_0_12px_rgba(45,212,191,0.6)]', // Turquoise glow
+  'Deep Learning': 'shadow-[0_0_12px_rgba(6,182,212,0.6)]', // Deep teal glow
+  'Voice AI': 'shadow-[0_0_12px_rgba(52,211,153,0.6)]', // Mint glow
+  'Generative AI': 'shadow-[0_0_12px_rgba(255,140,66,0.6)]', // Coral glow
 };
 
 export default function TimelineItem({ project, isFirst = false, isLast = false }: TimelineItemProps) {
