@@ -46,10 +46,10 @@ const categoryStyles: Record<string, { bg: string; text: string; border: string;
     glow: 'shadow-glow-coral',
   },
   '전체': {
-    bg: 'bg-primary-500/15',
-    text: 'text-primary-400',
-    border: 'border-primary-500/50',
-    glow: 'shadow-glow-teal',
+    bg: 'bg-asan-green/15',
+    text: 'text-asan-green-light',
+    border: 'border-asan-green/50',
+    glow: 'shadow-[0_0_20px_rgba(0,100,80,0.25)]',
   },
 };
 

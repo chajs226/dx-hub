@@ -13,7 +13,7 @@ export default {
         background: "hsl(222.2 84% 4.9%)",
         foreground: "hsl(210 40% 98%)",
 
-        // Seoul Asan Medical Center Primary Colors
+        // Seoul Asan Medical Center Primary Colors - Official CI
         primary: {
           DEFAULT: "hsl(180 100% 22.9%)", // #007474 - Deep Medical Teal
           foreground: "hsl(210 40% 98%)",
@@ -28,6 +28,28 @@ export default {
           800: '#004d4d',
           900: '#003939',
           950: '#002626',
+        },
+
+        // Seoul Asan Medical Center Official CI Colors
+        asan: {
+          // Main Colors - ASAN GREEN (Pantone 3155C: C100, M15, Y45, K40)
+          green: {
+            DEFAULT: '#006450', // Main ASAN GREEN
+            light: '#6B9B8A', // ASAN Light Green (Pantone 5483C: C60, M5, Y30, K20)
+            dark: '#004A3C',
+          },
+          // ASAN Orange (Pantone 138C: C0, M55, Y100, K0)
+          orange: {
+            DEFAULT: '#FF8C00',
+            light: '#FFA940',
+            dark: '#E67300',
+          },
+          // Sub colors
+          gray: {
+            DEFAULT: '#53565A', // Pantone Cool Gray 11C
+            light: '#8B8D8F',
+            dark: '#3A3C3E',
+          },
         },
 
         // Accent Orange from CI Mountain Icon

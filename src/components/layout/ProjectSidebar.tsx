@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Clock, Layers, ChevronDown, Sparkles } from 'lucide-react';
+import { Clock, Layers, ChevronDown } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { groupByYear } from '../../utils/dateHelpers';
 import { groupByCategory } from '../../utils/filterHelpers';
@@ -9,6 +9,7 @@ import YearSeparator from '../timeline/YearSeparator';
 import CategorySeparator from '../timeline/CategorySeparator';
 import CategoryFilter from '../filters/CategoryFilter';
 import YearSelector from '../filters/YearSelector';
+import DxHubLogo from '../ui/DxHubLogo';
 
 export default function ProjectSidebar() {
   const { filteredProjects, loading, viewMode, setViewMode } = useApp();
@@ -21,27 +22,21 @@ export default function ProjectSidebar() {
   const categories = Object.keys(groupedByCategory).sort();
 
   return (
-    <aside className="h-full bg-slate-950/30 border-r border-slate-800/50 flex flex-col overflow-hidden">
+    <aside className="h-full bg-gradient-to-br from-asan-gray/40 to-slate-950/60 border-r border-asan-gray-light/20 flex flex-col overflow-hidden">
       {/* Header with Logo - Seoul Asan Medical Center Identity */}
-      <div className="px-5 py-4 border-b border-slate-800/50 bg-gradient-to-br from-primary-950/30 via-slate-950/50 to-slate-950/50">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-primary-600 to-primary-800 shadow-lg shadow-primary-600/30">
-            <Sparkles className="w-5 h-5 text-white" />
-          </div>
-          <div>
-            <h1 className="text-lg font-semibold text-slate-100">DX Hub</h1>
-            <p className="text-xs text-primary-400/80">디지털정보혁신본부 AI 아카이브</p>
-          </div>
+      <div className="px-5 py-4 border-b border-asan-gray-light/20 bg-gradient-to-br from-asan-gray/30 via-asan-gray-dark/50 to-slate-950/50 backdrop-blur-sm">
+        <div className="mb-4">
+          <DxHubLogo />
         </div>
 
-        {/* View Mode Tabs - Teal Active State */}
-        <div className="flex gap-1 p-1 bg-slate-900/50 rounded-lg border border-slate-800/50">
+        {/* View Mode Tabs - ASAN GREEN Active State */}
+        <div className="flex gap-1 p-1 bg-asan-gray-dark/50 backdrop-blur-sm rounded-lg border border-asan-gray-light/20">
           <button
             onClick={() => setViewMode('timeline')}
             className={`
               flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all
               ${viewMode === 'timeline'
-                ? 'bg-primary-500/20 text-primary-400 shadow-sm ring-1 ring-primary-500/30'
+                ? 'bg-asan-green/20 text-asan-green-light shadow-sm ring-1 ring-asan-green/30'
                 : 'text-slate-400 hover:text-slate-300 hover:bg-slate-800/40'
               }
             `}
@@ -54,7 +49,7 @@ export default function ProjectSidebar() {
             className={`
               flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all
               ${viewMode === 'category'
-                ? 'bg-primary-500/20 text-primary-400 shadow-sm ring-1 ring-primary-500/30'
+                ? 'bg-asan-green/20 text-asan-green-light shadow-sm ring-1 ring-asan-green/30'
                 : 'text-slate-400 hover:text-slate-300 hover:bg-slate-800/40'
               }
             `}

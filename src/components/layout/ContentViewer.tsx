@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useApp } from '../../context/AppContext';
 import ProjectHeader from '../content/ProjectHeader';
 import ContentRenderer from '../content/ContentRenderer';
+import Footer from './Footer';
 import { FileSearch } from 'lucide-react';
 
 export default function ContentViewer() {
@@ -46,24 +47,29 @@ export default function ContentViewer() {
   }
 
   return (
-    <main className="h-full overflow-y-auto custom-scrollbar bg-slate-950/50">
-      <div className="max-w-4xl mx-auto p-6 lg:p-10">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={selectedProject.id}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-          >
-            {/* Project Header */}
-            <ProjectHeader project={selectedProject} />
+    <main className="h-full overflow-y-auto custom-scrollbar bg-slate-950/50 flex flex-col">
+      <div className="flex-1">
+        <div className="max-w-4xl mx-auto p-6 lg:p-10">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={selectedProject.id}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2 }}
+            >
+              {/* Project Header */}
+              <ProjectHeader project={selectedProject} />
 
-            {/* Content Blocks */}
-            <ContentRenderer contentBlocks={selectedProject.content_blocks} />
-          </motion.div>
-        </AnimatePresence>
+              {/* Content Blocks */}
+              <ContentRenderer contentBlocks={selectedProject.content_blocks} />
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
+
+      {/* Footer */}
+      <Footer />
     </main>
   );
 }
